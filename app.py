@@ -16,7 +16,10 @@ def hello():
   conn = psycopg2.connect(get_connection_string())
   cur = conn.cursor()
   cur.execute('SELECT * from guests')
-  return str(cur.fetchall())
+  guests = str(cur.fetchall())
+  cur.closse()
+  conn.close()
+  return guests
 
 if __name__ == '__main__':
   # Bind to PORT if defined, otherwise default to 5000.
