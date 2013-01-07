@@ -17,7 +17,7 @@ def hello():
   cur = conn.cursor()
   cur.execute('SELECT * from guests')
   guests = str(cur.fetchall())
-  cur.closse()
+  cur.close()
   conn.close()
   return guests
 
