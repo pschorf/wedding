@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Guest List</title>
+  </head>
+  <body>
+    <ul>
+    {% for guest in guests %}
+      <li>{{guest[1]}}&nbsp;{{guest[2]}}</li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>
