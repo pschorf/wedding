@@ -1,12 +1,19 @@
+import dj_database_url
 import os
 import psycopg2
 from flask import Flask
 
 app = Flask(__name__)
 
+def get_connection_string():
+  url = os.environ.get('HEROKU_POSTGRESQL_TEAL_URL')
+  parsed = dj_database_url.parse(url)
+  return 'dbname={} user={} password={} host={} port={}'.format(parsed['NAME'], parsed['USER'],
+      parsed['PASSWORD'], parsed['HOST'], parsed['PORT'])
+
 @app.route('/')
 def hello():
-  conn = psycopg2.connect(os.environ.get(HEROKU_POSTGRESQL_TEAL_URL))
+  conn = psycopg2.connect(get_connection_string())
   cur = conn.cursor()
   cur.execute('SELECT * from guests')
   return str(cur.fetchall())
