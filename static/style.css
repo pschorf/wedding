@@ -15,3 +15,9 @@
 #header a:visited, #header a:link, header a:hover, header a:focus, header a:active {
     color: #002a41;
 }
+
+#home {
+    display: block;
+    padding-top: 25px;
+    margin: 0 auto;
+}
