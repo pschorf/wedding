@@ -47,6 +47,13 @@ function initLink(current, next, prev) {
     current.insertBefore(container, current.firstChild);
 }
 
+function updateMapImages(x, y) {
+    console.log(x + ',' + y);
+}
+
 $(document).ready(function() {
     initLinks();
+    $('#map-image').mousemove(function(e) {
+       updateMapImages(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
+    });
 });
