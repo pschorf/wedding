@@ -1,7 +1,7 @@
 import dj_database_url
 import os
 import psycopg2
-from flask import Flask, render_template
+from flask import Flask, redirect, render_template, url_for
 
 app = Flask(__name__)
 
@@ -12,14 +12,8 @@ def get_connection_string():
       parsed['PASSWORD'], parsed['HOST'], parsed['PORT'])
 
 @app.route('/')
-def hello():
-  conn = psycopg2.connect(get_connection_string())
-  cur = conn.cursor()
-  cur.execute('SELECT * from guests')
-  guests = cur.fetchall()
-  cur.close()
-  conn.close()
-  return render_template('index.html', guests=guests)
+def index():
+  return redirect(url_for('static', filename='index.html'))
 
 if __name__ == '__main__':
   # Bind to PORT if defined, otherwise default to 5000.
