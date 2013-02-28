@@ -22,6 +22,7 @@ h3, h4 {
 a, a:visited, a:link, a:hover, a:focus, a:active {
     color: #002a41;
     text-decoration: none;
+    cursor: pointer;
 }
 
 div.party {

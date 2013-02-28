@@ -1,14 +1,18 @@
 var sections = ['quotes', 'party', 'photos', 'announcement', 'map', 'todo','registries','we-do'];
 
+function scrollTo(id) {
+    $.scrollTo('#' + id, 1000);
+}
+
 function initLinks() {
     for (var i = 0; i < sections.length; i++) {
         var next = undefined;
         var prev = undefined;
         if (i != 0) {
-            prev = '#' + sections[i-1];
+            prev = sections[i-1];
         }
         if (i != sections.length - 1) {
-            next = '#' + sections[i + 1];
+            next = sections[i + 1];
         }
         initLink(document.getElementById(sections[i]), next, prev);
     }
@@ -20,7 +24,9 @@ function initLink(current, next, prev) {
     var a;
     if (prev != undefined) {
         a = document.createElement('a');
-        a.href = prev;
+        a.onclick = function() {
+           scrollTo(prev);
+        };
         a.innerText = 'BACK';
         container.appendChild(a);
     }
@@ -31,7 +37,9 @@ function initLink(current, next, prev) {
     }
     if (next != undefined) {
         a = document.createElement('a');
-        a.href = next;
+        a.onclick = function() {
+           scrollTo(next);
+        };
         a.innerText = 'NEXT';
         container.appendChild(a);
     }
