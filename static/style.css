@@ -12,6 +12,6 @@
     text-decoration: none;
 }
 
-#header a:visited {
+#header a:visited, #header a:link, header a:hover, header a:focus, header a:active {
     color: #002a41;
 }
