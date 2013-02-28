@@ -70,3 +70,7 @@ div.column {
     display: inline-block;
     width: 300px;;
 }
+
+img.store {
+    padding: 0 10px;
+}
