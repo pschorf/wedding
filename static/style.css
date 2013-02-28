@@ -65,3 +65,8 @@ div.section {
     border-bottom: 3px orange dashed;
     text-align: center;
 }
+
+div.column {
+    display: inline-block;
+    width: 300px;;
+}
