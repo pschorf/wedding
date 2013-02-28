@@ -66,6 +66,10 @@ div.section {
     text-align: center;
 }
 
+div.section:last-of-type {
+    border: none;
+}
+
 div.column {
     display: inline-block;
     width: 300px;;
