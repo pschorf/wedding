@@ -18,12 +18,10 @@ h3, h4 {
     color: #002a41;
     text-transform: uppercase;
 }
-#header a {
-    text-decoration: none;
-}
 
-#header a:visited, #header a:link, #header a:hover, #header a:focus, #header a:active {
+a, a:visited, a:link, a:hover, a:focus, a:active {
     color: #002a41;
+    text-decoration: none;
 }
 
 div.party {
@@ -64,6 +62,7 @@ div.quote-wrapper img {
 div.section {
     border-bottom: 3px orange dashed;
     text-align: center;
+    position: relative;
 }
 
 div.section:last-of-type {
@@ -77,4 +76,10 @@ div.column {
 
 img.store {
     padding: 0 10px;
+}
+
+div.links {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

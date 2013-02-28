@@ -16,6 +16,7 @@ function initLinks() {
 
 function initLink(current, next, prev) {
     var container = document.createElement('div');
+    $(container).addClass('links');
     var a;
     if (prev != undefined) {
         a = document.createElement('a');
@@ -25,7 +26,7 @@ function initLink(current, next, prev) {
     }
     if (next != undefined && prev != undefined) {
         var sep = document.createElement('span');
-        sep.innerText = '//';
+        sep.innerHTML = '&nbsp;//&nbsp;';
         container.appendChild(sep);
     }
     if (next != undefined) {
