@@ -1,4 +1,7 @@
 var sections = ['quotes', 'party', 'photos', 'announcement', 'map', 'todo','registries','we-do'];
+var targets = [
+    {'img' : 'church-desc', 'x' : 246, 'y': 522}
+];
 
 function scrollTo(id) {
     $.scrollTo('#' + id, 1000);
@@ -48,12 +51,22 @@ function initLink(current, next, prev) {
 }
 
 function updateMapImages(x, y) {
-    console.log(x + ',' + y);
+    for (var i = 0; i < targets.length; i++) {
+        var target = targets[i];
+        if (x > target.x && x < target.x + 22 && y > target.y && y < target.y) {
+            console.log(target.img);
+        } else {
+            console.log(x + ' ' + y);
+        }
+    }
 }
 
 $(document).ready(function() {
     initLinks();
     $('#map-image').mousemove(function(e) {
-       updateMapImages(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
+       var parentOffset = $(this).parent().offset();
+       var left = parentOffset.left + this.offsetLeft;
+       var top = parentOffset.top + this.offsetTop;
+       updateMapImages(e.pageX - left, e.pageY - top);
     });
 });
