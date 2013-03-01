@@ -1,6 +1,8 @@
 var sections = ['quotes', 'party', 'photos', 'announcement', 'map', 'todo','registries','we-do'];
 var targets = [
-    {'img' : 'church-desc', 'x' : 246, 'y': 522}
+    {'img' : 'church-desc', 'x' : 111, 'y': 568},
+    {'img' : 'club-desc', 'x' : 115, 'y': 447},
+    {'img' : 'joet-desc', 'x' : 623, 'y': 170}
 ];
 
 function scrollTo(id) {
@@ -53,10 +55,11 @@ function initLink(current, next, prev) {
 function updateMapImages(x, y) {
     for (var i = 0; i < targets.length; i++) {
         var target = targets[i];
-        if (x > target.x && x < target.x + 22 && y > target.y && y < target.y) {
-            console.log(target.img);
+        var img = $(document.getElementById(target.img));
+        if (x > target.x && x < target.x + 22 && y > target.y && y < target.y + 22) {
+            img.css('display', 'block');
         } else {
-            console.log(x + ' ' + y);
+            img.css('display', 'none');
         }
     }
 }
@@ -68,5 +71,11 @@ $(document).ready(function() {
        var left = parentOffset.left + this.offsetLeft;
        var top = parentOffset.top + this.offsetTop;
        updateMapImages(e.pageX - left, e.pageY - top);
+    }).click(function(e) {
+        var parentOffset = $(this).parent().offset();
+        var left = parentOffset.left + this.offsetLeft;
+        var top = parentOffset.top + this.offsetTop;
+        console.log(e.pageX - left);
+        console.log( e.pageY - top);
     });
 });
