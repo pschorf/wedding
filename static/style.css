@@ -1,38 +1,76 @@
-@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
-
 body {
-    font-family: 'EB Garamond', serif;
-    font-size: 16px;
+    font-family: 'EB Garamond',  serif;
+    font-size: 11pt;
+	line-height:16pt;
+	letter-spacing:1px;
+	color:#002941;
 }
 
-h3, h4 {
-    font-weight: normal;
-    font-size: 18px;
+h3 {
+    font-family: 'EB Garamond',  serif;
+    font-size: 10pt;
+	font-weight:400;
+	letter-spacing:4px;
 }
+
+p {
+	margin-top:-5px;
+}
+
+a.nav {
+    font-family: 'EB Garamond',  serif;
+    font-size: 10pt;
+	line-height:16pt;
+	letter-spacing:1px;
+	color:#002941;
+}
+
+span.sep {
+    font-family: 'EB Garamond',  serif;
+    font-size: 10pt;
+	line-height:16pt;
+	letter-spacing:1px;
+	color:#c3942f;
+}
+
 
 #header-wrap {
     text-align: center;
 }
 
 #header {
-    color: #002a41;
+    color: #002941;
     text-transform: uppercase;
 }
 
-a, a:visited, a:link, a:hover, a:focus, a:active {
-    color: #002a41;
-    text-decoration: none;
-    cursor: pointer;
+a {
+	text-decoration: none;
+	color: #002941;
+}
+a:hover {
+	text-decoration: none;
+	color: #c3942f;
 }
 
+
 div.party {
-    display: inline-block;
-    width: 200px;
-    text-align: center;
+	display: inline-block;
+	width: 210px;
+	text-align:center;
+	vertical-align:top;
+	padding-left:10px;
+	padding-right:10px;
 }
 
 div.engaged {
     text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    padding: 0 50px;
+}
+
+div.proposal {
+    width: 800px;
     text-align: center;
     display: inline-block;
     padding: 0 50px;
@@ -51,8 +89,11 @@ img.header {
 
 div.quote-wrapper {
     display: inline-block;
-    width: 150px;
+    width: 180px;
+	padding-left:10px;
+	padding-right:10px;
     text-align: center;
+	vertical-align:top;
 }
 
 div.quote-wrapper img {
@@ -61,9 +102,12 @@ div.quote-wrapper img {
 }
 
 div.section {
-    border-bottom: 3px orange dashed;
-    text-align: center;
+    border-bottom:1px #c3942f dashed;
+    text-align:center;
     position: relative;
+	vertical-align:top;
+	padding:15px;
+	padding-bottom:20px;
 }
 
 div.section:last-of-type {
@@ -72,7 +116,10 @@ div.section:last-of-type {
 
 div.column {
     display: inline-block;
-    width: 300px;;
+    width: 300px;
+	vertical-align:top;
+	padding-left:25px;
+	padding-right:25px;
 }
 
 img.store {
@@ -87,6 +134,7 @@ div.links {
 
 #map {
     position: relative;
+	font-size: 10pt;
 }
 
 img.desc {

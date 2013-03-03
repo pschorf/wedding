@@ -33,12 +33,15 @@ function initLink(current, next, prev) {
            scrollTo(prev);
         };
         a.innerText = 'BACK';
+		a.href = "javascript:void(0)";
         container.appendChild(a);
+		$(a).addClass('nav');
     }
     if (next != undefined && prev != undefined) {
         var sep = document.createElement('span');
         sep.innerHTML = '&nbsp;//&nbsp;';
         container.appendChild(sep);
+		$(sep).addClass('sep');
     }
     if (next != undefined) {
         a = document.createElement('a');
@@ -46,7 +49,9 @@ function initLink(current, next, prev) {
            scrollTo(next);
         };
         a.innerText = 'NEXT';
+		a.href = "javascript:void(0)";
         container.appendChild(a);
+		$(a).addClass('nav');
     }
 
     current.insertBefore(container, current.firstChild);
