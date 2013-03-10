@@ -1,9 +1,10 @@
 body {
-    font-family: 'EB Garamond',  serif;
-    font-size: 11pt;
+  font-family: 'EB Garamond',  serif;
+  font-size: 11pt;
 	line-height:16pt;
 	letter-spacing:1px;
 	color:#002941;
+  margin-bottom: 0px;
 }
 
 h3 {
@@ -146,4 +147,8 @@ img.desc {
 
 img.gallery.hidden {
   display: none;
+}
+
+#we-do {
+  padding-bottom: 0px;
 }
