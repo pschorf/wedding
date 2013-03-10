@@ -69,7 +69,7 @@ function updateMapImages(x, y) {
     }
 }
 
-function store_onHover() {
+function onHoverChangeSrc() {
     if (this.src.indexOf('_hover') == -1) {
         this.src = this.src.replace('.png', '_hover.png');
     } else {
@@ -105,7 +105,7 @@ $(document).ready(function() {
         console.log(e.pageX - left);
         console.log( e.pageY - top);
     });
-    $('img.store').hover(store_onHover);
-    $('#gallery-next').click(gallery_next);
-    $('#gallery-back').click(gallery_back);
+    $('img.store').hover(onHoverChangeSrc);
+    $('#gallery-next').click(gallery_next).hover(onHoverChangeSrc);
+    $('#gallery-back').click(gallery_back).hover(onHoverChangeSrc);
 });
