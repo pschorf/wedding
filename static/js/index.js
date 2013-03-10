@@ -69,6 +69,14 @@ function updateMapImages(x, y) {
     }
 }
 
+function store_onHover() {
+    if (this.src.indexOf('_hover') == -1) {
+        this.src = this.src.replace('.png', '_hover.png');
+    } else {
+        this.src = this.src.replace('_hover', '');
+    }
+}
+
 $(document).ready(function() {
     initLinks();
     $('#map-image').mousemove(function(e) {
@@ -83,4 +91,5 @@ $(document).ready(function() {
         console.log(e.pageX - left);
         console.log( e.pageY - top);
     });
+    $('img.store').hover(store_onHover);
 });
