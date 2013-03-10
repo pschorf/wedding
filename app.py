@@ -15,6 +15,10 @@ def get_connection_string():
 def index():
   return redirect(url_for('static', filename='index.html'))
 
+@app.route('/favicon.ico')
+def index():
+  return redirect(url_for('static', filename='img/favicon.ico'))
+
 if __name__ == '__main__':
   # Bind to PORT if defined, otherwise default to 5000.
   port = int(os.environ.get('PORT', 5000))
