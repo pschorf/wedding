@@ -16,7 +16,7 @@ def index():
   return redirect(url_for('static', filename='index.html'))
 
 @app.route('/favicon.ico')
-def index():
+def favicon():
   return redirect(url_for('static', filename='img/favicon.ico'))
 
 if __name__ == '__main__':
