@@ -152,3 +152,22 @@ img.gallery.hidden {
 #we-do {
   padding-bottom: 0px;
 }
+
+#joet-desc {
+	position:absolute;
+	left: 455px;
+	top:140px;
+}
+
+#club-desc {
+	position:absolute;
+	left: 197px;
+	top:300px;
+}
+
+#church-desc {
+	position:absolute;
+	left: 220px;
+	top:580px;
+}
+
