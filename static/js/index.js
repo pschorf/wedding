@@ -77,6 +77,20 @@ function store_onHover() {
     }
 }
 
+function gallery_next() {
+    if ($('img.gallery.shown').next().length > 0) {
+        $('img.gallery.shown').removeClass('shown').addClass('hidden')
+            .next().addClass('shown').removeClass('hidden');
+    }
+}
+
+function gallery_back() {
+    if ($('img.gallery.shown').prev().length > 0) {
+        $('img.gallery.shown').removeClass('shown').addClass('hidden')
+            .prev().addClass('shown').removeClass('hidden');
+    }
+}
+
 $(document).ready(function() {
     initLinks();
     $('#map-image').mousemove(function(e) {
@@ -92,4 +106,6 @@ $(document).ready(function() {
         console.log( e.pageY - top);
     });
     $('img.store').hover(store_onHover);
+    $('#gallery-next').click(gallery_next);
+    $('#gallery-back').click(gallery_back);
 });

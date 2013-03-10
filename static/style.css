@@ -143,3 +143,7 @@ img.desc {
     top: 0;
     left: 0;
 }
+
+img.gallery.hidden {
+  display: none;
+}
