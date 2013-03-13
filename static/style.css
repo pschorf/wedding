@@ -139,10 +139,7 @@ div.links {
 }
 
 img.desc {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
+ display: none;
 }
 
 img.gallery.hidden {
@@ -155,19 +152,19 @@ img.gallery.hidden {
 
 #joet-desc {
 	position:absolute;
-	left: 455px;
+	left: 568px;
 	top:140px;
 }
 
 #club-desc {
 	position:absolute;
-	left: 197px;
+	left: 305px;
 	top:300px;
 }
 
 #church-desc {
 	position:absolute;
-	left: 193px;
-	top:514px;
+	left: 302px;
+	top: 512px;
 }
 
