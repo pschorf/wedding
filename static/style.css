@@ -4,7 +4,7 @@ body {
 	line-height:16pt;
 	letter-spacing:1px;
 	color:#002941;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 h3 {
@@ -107,8 +107,7 @@ div.section {
     text-align:center;
     position: relative;
 	vertical-align:top;
-	padding:15px;
-	padding-bottom:20px;
+  padding: 15px 15px 20px;
 }
 
 div.section:last-of-type {
@@ -147,7 +146,7 @@ img.gallery.hidden {
 }
 
 #we-do {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 #joet-desc {
@@ -166,5 +165,9 @@ img.gallery.hidden {
 	position:absolute;
 	left: 302px;
 	top: 512px;
+}
+
+#google-link {
+  text-decoration: underline;
 }
 
