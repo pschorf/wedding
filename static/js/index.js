@@ -62,9 +62,9 @@ function updateMapImages(x, y) {
         var target = targets[i];
         var img = $(document.getElementById(target.img));
         if (x > target.x && x < target.x + 22 && y > target.y && y < target.y + 22) {
-            img.css('display', 'block');
+            img.removeClass('desc');
         } else {
-            img.css('display', 'none');
+            img.addClass('desc');
         }
     }
 }

@@ -4,7 +4,7 @@ body {
 	line-height:16pt;
 	letter-spacing:1px;
 	color:#002941;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 h3 {
@@ -107,8 +107,7 @@ div.section {
     text-align:center;
     position: relative;
 	vertical-align:top;
-	padding:15px;
-	padding-bottom:20px;
+  padding: 15px 15px 20px;
 }
 
 div.section:last-of-type {
@@ -139,10 +138,7 @@ div.links {
 }
 
 img.desc {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
+ display: none;
 }
 
 img.gallery.hidden {
@@ -150,24 +146,28 @@ img.gallery.hidden {
 }
 
 #we-do {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 #joet-desc {
 	position:absolute;
-	left: 455px;
+	left: 568px;
 	top:140px;
 }
 
 #club-desc {
 	position:absolute;
-	left: 197px;
+	left: 305px;
 	top:300px;
 }
 
 #church-desc {
 	position:absolute;
-	left: 193px;
-	top:514px;
+	left: 302px;
+	top: 512px;
+}
+
+#google-link {
+  text-decoration: underline;
 }
 
